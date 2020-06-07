@@ -61,8 +61,10 @@ print('=================================')
 
 lego_21309 = pd.DataFrame({'关键词':word, '售价':sale})
 lego_21309 = lego_21309.set_index('售价')
-
 print(lego_21309)
-lego_21309.to_excel('D:/Python-Work/data/lego0601.xlsx')
+
+url_win = 'D:/Python-Work/data/lego0601.xlsx'
+url_mac = '/Users/liufeng/Documents/Python/data/lego0601.xlsx'
+lego_21309.to_excel(url_mac)
 #lego_21309[0:3]
 #print(lego_21309)
