@@ -21,7 +21,7 @@ headers = {
 
 
 start_url = 'https://s.taobao.com/search?q='
-goods = 'lego 21309'
+goods = 'lego 42115 兰博基尼'
 url = start_url + goods + '&s=' + str(0)
 
 get_url = requests.get(url, headers = headers)
@@ -40,7 +40,8 @@ price = re.findall(res_price, html)
 word = []
 sale = []
 #riqi = []
-path_xls = 'D:/Python-Work/data/lego0601.xlsx'
+path_xls_win = 'D:/Python-Work/data/lego0601.xlsx'
+path_xls_mac = '/Users/liufeng/Documents/Python/data/lego42.xlsx'
 
 
 print('=================================')
@@ -71,7 +72,7 @@ lego_21309 = lego_21309.set_index('售价')
 print(lego_21309)
 
 #writer = pd.ExcelWriter(path_xls)
-with pd.ExcelWriter(path_xls) as writer:
+with pd.ExcelWriter(path_xls_mac) as writer:
     lego_21309.to_excel(writer, sheet_name = now)
     #lego_21309.to_excel(writer, sheet_name = tomorrowTime)
 #

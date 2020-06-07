@@ -41,7 +41,8 @@ test.to_excel('D:/Python-Work/data/lego_tec.xlsx')
 
 #===============================================================
 print('=================================')
-path_xls = 'D:/Python-Work/data/car.xlsx'
-pr = pd.read_excel(path_xls, sheet_name='L4')
+path_xls_win = 'D:/Python-Work/data/car.xlsx'
+path_xls_mac = '/Users/liufeng/Documents/Python/data/lego_42.xlsx'
+pr = pd.read_excel(path_xls_mac, sheet_name='L4')
 print(pr)
 print('=================================')
